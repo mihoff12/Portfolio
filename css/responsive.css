@@ -1,0 +1,126 @@
+/* Responsive Styles */
+
+/* Tablets and smaller laptops */
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 150px 0 80px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablets and large phones */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        gap: 40px;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .hero {
+        padding: 130px 0 60px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
