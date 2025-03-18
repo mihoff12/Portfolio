@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcady Village | Project Details</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,6 +19,7 @@
                 <ul class="nav-links">
                     <li><a href="../index.html">Projects</a></li>
                 </ul>
+                
             </nav>
         </div>
     </header>
@@ -27,7 +30,7 @@
             
             <div class="project-overview">
                 <div class="project-image">
-                    <img src="../assets/images/ArcadyVillage/thumbnail.jpg" alt="Arcady Village Main Image">
+                    <img src="../assets/images/ArcadyVillage/PlaceAutomat.gif" alt="Arcady Village Main Image" class="clickable-image">
                 </div>
                 
                 <div class="project-meta">
@@ -35,7 +38,7 @@
                     <ul>
                         <li><strong>Engine:</strong> Unity</li>
                         <li><strong>Programming Language:</strong> C#</li>
-                        <li><strong>Projecttype:</strong> Individual Game Development</li>
+                        <li><strong>Project Type:</strong> Collaborative Development (Team of 2)</li>
                         <li><strong>Status:</strong> In Development</li>
                     </ul>
                 </div>
@@ -56,6 +59,21 @@
                         <p>In the evenings, the gameplay transforms into a management scenario, in which the player must run their arcade hall.</p>
                     </div>
                 </div>
+                
+                <h3>My Role & Responsibilities</h3>
+                <p>As part of a two-person development team, I've contributed to virtually all aspects of the game development process:</p>
+                <ul class="role-responsibilities">
+                    <li><strong>Programming:</strong> Developed multiple arcade games, implemented the main gameplay loop, created the relationship system between the player and NPCs, and programmed individual NPC characteristics</li>
+                    <li><strong>3D Modeling:</strong> Created environmental elements including buildings, trees, and decorative objects</li>
+                    <li><strong>2D Art:</strong> Designed pixel art and vector graphics primarily for the arcade games</li>
+                    <li><strong>Visual Effects:</strong> Implemented and modified shaders, set up post-processing effects, and created particle effects in Unity</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>This project began during my Master's studies in collaboration with a fellow student. We started with an initial concept, refined it through detailed planning, and then moved into active development. The project has been an excellent opportunity to apply academic knowledge to a complex, practical game development challenge.</p>
+                
+                <h3>Key Learnings</h3>
+                <p>The most significant learning from this project has been properly estimating scope. Developing a game that contains multiple smaller games within it proved to be a substantially larger undertaking than initially anticipated. This experience has greatly improved my project planning and time estimation skills.</p>
 
                 <h3>Arcade Games</h3>
                 <p>A core aspect of the game is the ability to populate the arcade hall with a variety of arcade machines. Numerous small arcade games in 2D or 3D have been developed and implemented within the game.</p>
@@ -68,6 +86,7 @@
                         <img src="../assets/images/ArcadyVillage/arcade-game2.jpg" alt="3D Arcade Game Example">
                     </div>
                 </div>
+            </div>
 
             <div class="project-gallery">
                 <h2>Gameplay Pictures</h2>
@@ -80,7 +99,7 @@
             </div>
 
             <div class="project-technologies">
-                <h2>Technologies</h2>
+                <h2>Technologies Used</h2>
                 <div class="tech-tags">
                     <span>Unity</span>
                     <span>Blender</span>
@@ -89,15 +108,36 @@
                     <span>Audacity</span>
                 </div>
             </div>
-        </div>
+            
+            <div class="future-plans">
+                <h2>Future Development</h2>
+                <p>Current development is focused on expanding the game with additional arcade games, enhancing NPC dialogues, and implementing more activities for the player to engage with around the town. These additions will further enrich the gameplay experience and deepen the town simulation aspects.</p>
+            </div>
+            
 
-    <div class="project-webbuilds">
-                <h2>Playable Web Builds</h2>
-                <p>Web builds of the arcade games will be available for testing soon.</p>
-                <!-- Web builds of the games can be added here later -->
+            <div class="playable-games">
+                <div class="game-container">
+                    <h2>Cloud Arcade Game</h2>
+                    <iframe src="../assets/builds/CloudGame/index.html" width="800" height="600" allowfullscreen></iframe>
+                    <p>One of the many different arcade games that the player can buy in the game to fill the arcade hall with arcade machines.</p>
+                    <p>The aim of the game is to collect all the raindrops and prevent the flower from drying out at the same time.</p>
+                </div>
             </div>
         </div>
-    </section>
+
+    <div class="steam-link-container">
+        <a href="https://store.steampowered.com/app/2866530/Arcady_Village/" target="_blank" class="steam-button">
+            <div class="steam-button-content">
+                <div class="steam-icon">
+                    <i class="fab fa-steam"></i>
+                </div>
+                <div class="steam-text">
+                    <span class="view-on">View on</span>
+                    <span class="steam-name">Steam</span>
+                </div>
+            </div>
+        </a>
+    </div>
 
     <script src="../js/main.js"></script>
 </body>

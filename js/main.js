@@ -184,3 +184,93 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
     animate();
 });
+
+// Lightbox-Funktionalität für Galeriebilder
+document.addEventListener('DOMContentLoaded', function() {
+    // Lightbox-HTML einfügen
+    const lightboxHTML = `
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="lightbox-caption"></div>
+            <div class="lightbox-controls">
+                <button id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+    
+    // Elemente auswählen
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeLightbox = document.querySelector('.close-lightbox');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    // Alle Galeriebilder auswählen
+    const galleryImages = document.querySelectorAll('.gallery-grid img, .arcade-games-gallery img');
+    let currentIndex = 0;
+    
+    // Klick-Event für jedes Bild hinzufügen
+    galleryImages.forEach((img, index) => {
+        img.classList.add('clickable-image');
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = this.src;
+            lightboxCaption.textContent = this.alt;
+            currentIndex = index;
+            updateControls();
+        });
+    });
+    
+    // Lightbox schließen
+    closeLightbox.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+    });
+    
+    // Außerhalb des Bilds klicken, um Lightbox zu schließen
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+    
+    // Vorheriges Bild anzeigen
+    prevBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+        lightboxCaption.textContent = galleryImages[currentIndex].alt;
+        updateControls();
+    });
+    
+    // Nächstes Bild anzeigen
+    nextBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+        lightboxCaption.textContent = galleryImages[currentIndex].alt;
+        updateControls();
+    });
+    
+    // Tastaturfunktionalität hinzufügen
+    document.addEventListener('keydown', function(e) {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            } else if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        }
+    });
+    
+    // Steuerelemente aktualisieren (Buttons ausblenden bei nur einem Bild)
+    function updateControls() {
+        if (galleryImages.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        }
+    }
+});

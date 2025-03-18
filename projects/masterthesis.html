@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic NPC System | Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html">Michael Hoffmann</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <div class="container">
+            <h1>Master's Thesis</h1>
+            
+            <div class="project-overview">
+                <div class="project-image">
+                    <img src="../assets/images/MasterThesis/UML.png" alt="UML diagram of the complete system" class="clickable-image">
+                </div>
+                
+                <div class="project-meta">
+                    <h2>Project Overview</h2>
+                    <ul>
+                        <li><strong>Engine:</strong> Unity</li>
+                        <li><strong>Programming Language:</strong> C#</li>
+                        <li><strong>Project Type:</strong> Master's Thesis</li>
+                        <li><strong>Status:</strong> Completed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Description</h2>
+                <p>In my master´s thesis titled "Enhancing Player Experience Through Dynamic NPC Attributes", I created an innovative system in Unity that dynamically adjusts NPC attributes based on their relationship with the player, enabling contextual behavior adaptations driven by numerical relationship values and definable relationship stages.</p>
+                
+                <h3>System Overview</h3>
+                <div class="mechanics-grid">
+                    <div class="mechanic-card">
+                        <h4>Player-NPC Relationships</h4>
+                        <p>Each NPC maintains a unique relationship with the player that can change based on interactions throughout the game. The relationship values influence how NPCs behave and respond to the player's actions.</p>
+                    </div>
+                    <div class="mechanic-card">
+                        <h4>Dynamic Behavior Adaptation</h4>
+                        <p>NPC behaviors and characteristics adapt dynamically based on relationship levels, creating more realistic and personalized interactions that affect gameplay experience.</p>
+                    </div>
+                </div>
+                
+                <h3>Motivation & Development</h3>
+                <p>The inspiration for this system came during my work on the Arcady Village project, where we wanted to create more individualized and dynamic NPCs with unique personalities that could influence the gameplay. This system enables gameplay to become more challenging if the player treats NPCs poorly or fails to maintain good relationships with them.</p>
+                
+                <p>While initially conceived for Arcady Village, the system was designed to be universally applicable. Custom editor windows were developed to simplify the configuration process, making it accessible for different game projects.</p>
+
+                <h3>Technical Implementation</h3>
+                <p>The system is implemented through two ScriptableObjects assigned to each NPC:</p>
+                <ul class="role-responsibilities">
+                    <li><strong>Personality ScriptableObject:</strong> Configures which in-game actions can positively or negatively affect the relationship with the player. Actions can be easily configured through a custom editor window and are stored in an enum for selection via dropdown menu. Each action is assigned a value that is added to or subtracted from the relationship score.</li>
+                    <li><strong>Relationship ScriptableObject:</strong> Defines character traits for each NPC by adding multiple relationship stages that activate at specific relationship values. All behaviors added to active relationship stages become active. Additionally, there's an option to add traits that are always active, enabling the development of characteristics purely based on relationship values, such as probabilities.</li>
+                </ul>
+
+                <h3>Key Features</h3>
+                <ul class="role-responsibilities">
+                    <li><strong>Customizable Relationship Metrics:</strong> Define specific actions that affect NPC relationships differently based on the NPC's personality</li>
+                    <li><strong>Tiered Relationship System:</strong> Create different relationship stages with unique behaviors that activate at defined thresholds</li>
+                    <li><strong>Easy Configuration:</strong> Custom editor windows simplify the process of setting up and adjusting NPC behaviors</li>
+                    <li><strong>Universal Application:</strong> System designed to work across various game types and contexts</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The development process involved extensive research into character design and player interaction psychology, followed by system design, implementation of the core relationship mechanics, creation of the ScriptableObject architecture, and development of custom editor tools to make the system more accessible.</p>
+            </div>
+
+            <div class="project-gallery">
+                <h2>System Screenshots</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/images/MasterThesis/Personality.png" alt="Personality ScriptableObject Editor">
+                    <img src="../assets/images/MasterThesis/RelationshipLevel.png" alt="Relationship ScriptableObject Editor">
+                    <img src="../assets/images/MasterThesis/UI.png" alt="Visualisation of relationship changes">
+                    <img src="../assets/images/MasterThesis/RelationshipImpactsWindow.png" alt="Configuration window of the action types for influencing the relationship">
+                </div>
+            </div>
+
+            <div class="project-technologies">
+                <h2>Technologies Used</h2>
+                <div class="tech-tags">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>ScriptableObjects</span>
+                    <span>Custom Editor Tools</span>
+                    <span>Inkscape</span>
+                </div>
+            </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

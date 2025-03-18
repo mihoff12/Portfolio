@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods of Indirect Player Guidance | Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html">Michael Hoffmann</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <div class="container">
+            <h1>Bachelor's Thesis</h1>
+            
+            <div class="project-overview">
+                <div class="project-image">
+                    <img src="../assets/images/BachelorThesis/Screenshot_2.png" alt="Test House" class="clickable-image">
+                </div>
+                
+                <div class="project-meta">
+                    <h2>Project Overview</h2>
+                    <ul>
+                        <li><strong>Engine:</strong> Unity</li>
+                        <li><strong>Programming Language:</strong> C#</li>
+                        <li><strong>Project Type:</strong> Bachelor's Thesis</li>
+                        <li><strong>Status:</strong> Completed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Description</h2>
+                <p>In my bachelor's thesis titled "Methods of Indirect Player Guidance in a First-Person Scenario," I investigated the effectiveness of common indirect guidance methods and their impact on the player experience. For this purpose, I developed a first-person scenario in which testers were guided through the game using various indirect guidance methods.</p>
+                
+                <h3>System Overview</h3>
+                <div class="mechanics-grid">
+                    <div class="mechanic-card">
+                        <h4>Direct vs. Indirect Player Guidance</h4>
+                        <p>While direct player guidance is implemented through quests, dialogues, text overlays, or map markers, indirect guidance methods are organically integrated into the game world, allowing players to perceive the guidance mostly on a subconscious level.</p>
+                    </div>
+                    <div class="mechanic-card">
+                        <h4>Guidance Methods</h4>
+                        <p>In this thesis, four commonly used indirect guidance methods were implemented and tested: color highlights, sound design, light guidance, and visual particle paths.</p>
+                    </div>
+                </div>
+                
+                <h3>Test Scenario & Evaluation</h3>
+                <p>For the study, I developed a search game where the player needs to find four keys in a house with two floors and six rooms to unlock a sealed door. Only one room can be accessed at a time, and each room and the key contained within is highlighted by a different indirect guidance method.</p>
+                
+                <p>For the testing phase, two versions of the game were created – one with and one without the indirect guidance methods. 40 testers played both versions in different sequences and subsequently completed a questionnaire about their gaming experience. Additionally, log files were created to record gameplay time and progression.</p>
+
+                <h3>Implemented Guidance Methods</h3>
+                <ul class="role-responsibilities">
+                    <li><strong>Color Highlights:</strong> The door to be opened and relevant objects in the room were highlighted in color to draw the player's attention.</li>
+                    <li><strong>Sound Design:</strong> A ringing telephone in the target room attracted the player in the right direction and to the corresponding key.</li>
+                    <li><strong>Light Guidance:</strong> A spotlight illuminated the correct door, while in the target room, a table lamp marked the area with the key.</li>
+                    <li><strong>Particle Path:</strong> A visual path of particles guided the player to the target location and to the key.</li>
+                </ul>
+
+                <h3>Results & Conclusion</h3>
+                <p>The study showed that indirect guidance methods have a positive impact on the player experience:</p>
+                <ul class="role-responsibilities">
+                    <li><strong>More Dynamic Content:</strong> The changing guidance methods created interesting, sometimes mystical gaming experiences.</li>
+                    <li><strong>Better Game Structure:</strong> The guidance methods reduced the risk of players getting stuck in the game flow.</li>
+                    <li><strong>Flexible Guidance Intensity:</strong> Depending on the situation, guidance methods of varying noticeability can be used.</li>
+                    <li><strong>Organic Integration:</strong> Well-integrated guidance methods were perceived less as explicit guidance and more as natural game content.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Guidance Methods</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/images/BachelorThesis/ColorHint.png" alt="Color highlighting of doors and objects">
+                    <img src="../assets/images/BachelorThesis/Lichthinweis.png" alt="Light guidance through spotlights and table lamps">
+                    <img src="../assets/images/BachelorThesis/PartikelHint.png" alt="Visual particle path as guidance method">
+                    <img src="../assets/images/BachelorThesis/Screenshot_1.png" alt="Locked door that needs to be opened">
+                </div>
+            </div>
+
+            <div class="project-technologies">
+                <h2>Technologies Used</h2>
+                <div class="tech-tags">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>Blender</span>
+                    <span>Audacity</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
