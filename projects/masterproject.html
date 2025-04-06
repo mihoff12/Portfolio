@@ -30,7 +30,7 @@
             <div class="project-overview">
                 <div class="project-video">
                     <video width="100%" controls>
-                        <source src="../assets/videos/MasterProject.mp4" type="video/mp4">
+                        <source src="../assets/videos/MasterProjectShort.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -48,7 +48,7 @@
 
             <div class="project-description">
                 <h2>Project Description</h2>
-                <p>As part of my Master's studies, I collaborated with a team of five students on a project titled "Mixed Reality Application with AI-Controlled Characters." We developed a VR Dungeon Fighter game where the player navigates through a prison-like dungeon, fights enemies, and faces a final boss. A unique feature is an AI-controlled dragon companion that assists the player throughout the journey.</p>
+                <p>As part of my Master's studies, I collaborated with a team of five students on a project titled "Mixed Reality Application with AI-Controlled Characters." We developed a VR Dungeon Fighter game where the player navigates through a prison-like dungeon, fights enemies, and faces a final boss. </p>
                 
                 <h3>Game Mechanics</h3>
                 <p>While the complete game featured an extensive combat system, enemy AI, and boss fight mechanics, I personally mainly worked on the following aspects of the game:</p>
@@ -63,18 +63,10 @@
                     </div>
                 </div>
                 
-                <p>Other team members developed complementary game mechanics such as:</p>
-                <ul class="additional-mechanics">
-                    <li><strong>Combat System:</strong> Melee combat mechanics and player interaction with enemies</li>
-                    <li><strong>Enemy AI:</strong> Behavior patterns for different types of enemies with varying attack strategies</li>
-                    <li><strong>Boss Fight Mechanics:</strong> Complex AI system for the final boss with multiple attack phases</li>
-                    <li><strong>VR Integration:</strong> Implementation of the VR controls and treadmill platform connectivity</li>
-                </ul>
-                
                 <h3>My Role & Responsibilities</h3>
                 <p>In this team project, I was primarily responsible for two core components:</p>
                 <ul class="role-responsibilities">
-                    <li><strong>AI Dragon Companion:</strong> Developed the complete logic and behavior of the companion, including steering behaviors, finite state machine (FSM), and various action modes</li>
+                    <li><strong>AI Dragon Companion:</strong> Developed the complete logic and behavior of the companion, including steering behaviors, FSM, and various action modes</li>
                     <li><strong>Dungeon Generation:</strong> Implementation of a procedurally generated dungeon using the Depth-First Search algorithm</li>
                     <li><strong>3D Modeling:</strong> Creation of the dragon model, dungeon rooms, and interior elements</li>
                     <li><strong>Animation & Effects:</strong> Animation of the dragon and implementation of particle effects for various gameplay elements</li>
@@ -92,20 +84,11 @@
                     </li>
                     <li><strong>Hierarchical FSM:</strong>
                         <ul>
-                            <li>Main states: "Support" and "Attack"</li>
-                            <li>Support sub-states: "Follow", "Heal", "Guide"</li>
-                            <li>Attack sub-states: "Damage", "Slow"</li>
+                            <li>Main states: Support and Attack</li>
+                            <li>Support sub-states: Follow, Heal and Guide</li>
+                            <li>Attack sub-states: Damage and Slow</li>
                         </ul>
                     </li>
-                </ul>
-
-                <h3>Dungeon Generation</h3>
-                <p>For the procedurally generated game world, I developed a custom dungeon generator:</p>
-                <ul class="dungeon-details">
-                    <li>Based on the Depth-First Search algorithm</li>
-                    <li>Placement of rooms in a grid with random orientation</li>
-                    <li>Automatic generation of connecting corridors between rooms</li>
-                    <li>Placement of the boss room at the end of the generated path</li>
                 </ul>
 
                 <div class="dragon-behavior-details">
@@ -118,6 +101,15 @@
                         <li>Attacks the nearest enemy when foes are within attack range</li>
                         <li>Slows down enemies when the player is in distress</li>
                     </ul>
+
+                <h3>Dungeon Generation</h3>
+                <p>For the procedurally generated game world, I developed a custom dungeon generator:</p>
+                <ul class="dungeon-details">
+                    <li>Based on the Depth-First Search algorithm</li>
+                    <li>Placement of rooms in a grid with random orientation</li>
+                    <li>Automatic generation of connecting corridors between rooms</li>
+                    <li>Placement of the boss room at the end of the generated path</li>
+                </ul>
                 </div>
             </div>
 
@@ -131,26 +123,6 @@
                     <img src="../assets/images/MasterProject/DragonGuide.gif" alt="Dragon Guides the Player">
                 </div>
             </div>
-
-            <div class="project-technologies">
-                <h2>Technologies Used</h2>
-                <div class="tech-tags">
-                    <span>Unity</span>
-                    <span>C#</span>
-                    <span>VR</span>
-                    <span>Blender</span>
-                    <span>Finite State Machines</span>
-                    <span>Steering Behaviors</span>
-                    <span>Procedural Generation</span>
-                </div>
-            </div>
-            
-            <div class="key-learnings">
-                <h2>Key Learnings</h2>
-                <p>This project provided me with valuable experience in developing complex AI systems and procedural generation. Implementing the hierarchical FSM for the dragon companion taught me how to program intelligent and context-aware behavior. Working in a team also improved my abilities to structure and document code so that other team members could seamlessly work with it.</p>
-            </div>
-        </div>
-    </section>
 
     <script src="../js/main.js"></script>
 </body>
