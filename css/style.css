@@ -674,11 +674,32 @@ section {
 }
 
 .about-image h3 {
-    text-align: center; /* Zentriert die Skills-Überschrift */
-    margin-top: 25px; /* Etwas mehr Abstand zum Bild */
+    text-align: center;
+    margin-top: 25px;
 }
 
 .about-image .tags {
-    justify-content: center; /* Zentriert die Skill-Tags */
-    margin: 0 auto; /* Zentriert den Container */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.contact-email {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.contact-email p {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 15px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+}
+
+.contact-email i {
+    margin-right: 8px;
+    color: var(--accent-color);
 }
