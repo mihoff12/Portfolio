@@ -1,3 +1,6 @@
+/* ------------------------------------------------
+   VARIABLES
+------------------------------------------------ */
 :root {
     --dark-bg: #121212;
     --darker-element: #1e1e1e;
@@ -11,6 +14,9 @@
     --button-hover: #6a5acd;
 }
 
+/* ------------------------------------------------
+   BASE STYLES
+------------------------------------------------ */
 body {
     background-color: var(--dark-bg);
     color: var(--text-primary);
@@ -18,7 +24,7 @@ body {
     line-height: 1.6;
 }
 
-/* Einheitliches Überschriften-Styling */
+/* Typography */
 h1 {
     color: var(--text-primary);
 }
@@ -27,7 +33,6 @@ h2, h3, h4 {
     color: var(--accent-color);
 }
 
-/* Unterschiedliche Größen für die verschiedenen Überschriftenebenen */
 h2 {
     font-size: 1.8rem;
     margin: 30px 0 20px;
@@ -45,6 +50,21 @@ h4 {
     margin: 20px 0 10px;
 }
 
+/* Common section spacing */
+section {
+    padding: 60px 0;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ------------------------------------------------
+   HEADER AND NAVIGATION
+------------------------------------------------ */
 header {
     background-color: var(--header-bg);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -61,6 +81,7 @@ nav {
     align-items: center;
 }
 
+/* Logo styling */
 .logo {
     position: relative;
 }
@@ -91,6 +112,7 @@ nav {
     color: var(--accent-color);
 }
 
+/* Navigation links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -134,17 +156,9 @@ nav {
     width: 100%;
 }
 
-section {
-    padding: 60px 0;
-    margin-bottom: 30px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+/* ------------------------------------------------
+   HERO SECTION
+------------------------------------------------ */
 .hero {
     background: linear-gradient(to bottom, var(--dark-bg), var(--darker-element));
     padding: 100px 0;
@@ -158,14 +172,10 @@ section {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* Einheitlicheres Styling für Cards */
+/* ------------------------------------------------
+   CARD COMPONENTS (Project cards, mechanic cards)
+------------------------------------------------ */
+/* Base card styles */
 .project-card, 
 .mechanic-card,
 .project-meta {
@@ -184,26 +194,52 @@ section {
     background-color: var(--card-hover);
 }
 
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Project info in cards */
+.project-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+/* Project images */
 .project-image img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
-    border-bottom: 3px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .project-info {
     padding: 20px;
 }
 
-.project-info h3 {
-    margin-bottom: 10px;
+/* ------------------------------------------------
+   PROJECTS GRID
+------------------------------------------------ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.project-info p {
-    color: var(--text-secondary);
-    margin-bottom: 15px;
-}
-
+/* ------------------------------------------------
+   TAG COMPONENTS
+------------------------------------------------ */
+/* Standard tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -220,6 +256,26 @@ section {
     font-weight: 500;
 }
 
+/* Tech tags - slightly larger */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tech-tags span {
+    background-color: rgba(123, 104, 238, 0.2);
+    color: var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ------------------------------------------------
+   BUTTONS
+------------------------------------------------ */
 .btn {
     display: inline-block;
     background-color: var(--accent-color);
@@ -240,10 +296,75 @@ section {
     font-size: 0.9rem;
 }
 
+/* Steam button special styling */
+.steam-button {
+    display: inline-flex;
+    background-color: #171a21;
+    color: white;
+    padding: 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid #2a475e;
+}
+
+.steam-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.steam-button-content {
+    display: flex;
+    align-items: center;
+}
+
+.steam-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b2838;
+    padding: 15px;
+    font-size: 24px;
+}
+
+.steam-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.view-on {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 3px;
+}
+
+.steam-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.steam-link-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* ------------------------------------------------
+   PROJECT DETAIL PAGE
+------------------------------------------------ */
 .project-detail h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
     text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, rgba(123, 104, 238, 0.1) 0%, rgba(123, 104, 238, 0.3) 50%, rgba(123, 104, 238, 0.1) 100%);
+    border-radius: 8px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .project-overview {
@@ -259,6 +380,7 @@ section {
     }
 }
 
+/* Project meta information */
 .project-meta ul {
     list-style: none;
     padding: 0;
@@ -278,7 +400,7 @@ section {
     margin-right: 10px;
 }
 
-/* Konsistente Abstände zwischen den Elementen */
+/* Section spacing for project details */
 .project-overview, 
 .project-description, 
 .project-gallery, 
@@ -287,7 +409,7 @@ section {
     margin-bottom: 50px;
 }
 
-/* Verbesserte Lesbarkeit der Texte */
+/* Text styles for project descriptions */
 .project-description p,
 .project-webbuilds p {
     color: var(--text-secondary);
@@ -302,6 +424,43 @@ section {
     margin-bottom: 8px;
 }
 
+/* Main project image special styling */
+.project-overview .project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 16 / 9; /* Consistent aspect ratio */
+    max-height: 400px;
+}
+
+.project-overview .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-overview .project-image:hover img {
+    transform: scale(1.03);
+}
+
+.project-overview .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* ------------------------------------------------
+   MECHANICS GRID
+------------------------------------------------ */
 .mechanics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -313,7 +472,9 @@ section {
     margin-bottom: 10px;
 }
 
-/* Gallery-Grid-Verbesserungen */
+/* ------------------------------------------------
+   GALLERY
+------------------------------------------------ */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -335,40 +496,7 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.tech-tags span {
-    background-color: rgba(123, 104, 238, 0.2);
-    color: var(--accent-color);
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--dark-bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--button-hover);
-}
-
-/* Clickable-Image Indikator */
+/* Clickable image indicators */
 .clickable-image {
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -396,7 +524,9 @@ section {
     font-size: 16px;
 }
 
-/* Lightbox Styling */
+/* ------------------------------------------------
+   LIGHTBOX
+------------------------------------------------ */
 .lightbox {
     display: none;
     position: fixed;
@@ -477,121 +607,9 @@ section {
     transform: scale(1.1);
 }
 
-/* Verbesserte Projektbild-Styling */
-.project-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-/* Spezielles Styling für das Hauptprojektbild */
-.project-overview .project-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    aspect-ratio: 16 / 9; /* Einheitliches Seitenverhältnis */
-    max-height: 400px;
-}
-
-.project-overview .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-overview .project-image:hover img {
-    transform: scale(1.03);
-}
-
-/* Schönerer Rahmen für das Hauptprojektbild */
-.project-overview .project-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid var(--accent-color);
-    border-radius: 8px;
-    opacity: 0.6;
-    pointer-events: none;
-}
-
-/* Hintergrundverlauf für Projekttitel */
-.project-detail h1 {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    font-size: 2.8rem;
-    background: linear-gradient(90deg, rgba(123, 104, 238, 0.1) 0%, rgba(123, 104, 238, 0.3) 50%, rgba(123, 104, 238, 0.1) 100%);
-    border-radius: 8px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-
-.steam-link-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.steam-button {
-    display: inline-flex;
-    background-color: #171a21;
-    color: white;
-    padding: 0;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    border: 1px solid #2a475e;
-}
-
-.steam-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.steam-button-content {
-    display: flex;
-    align-items: center;
-}
-
-.steam-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1b2838;
-    padding: 15px;
-    font-size: 24px;
-}
-
-.steam-text {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-}
-
-.view-on {
-    font-size: 0.8rem;
-    opacity: 0.8;
-    margin-bottom: 3px;
-}
-
-.steam-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-/* About Section Styling */
+/* ------------------------------------------------
+   ABOUT SECTION
+------------------------------------------------ */
 .about {
     background: linear-gradient(to bottom, var(--dark-bg), var(--darker-element));
     position: relative;
@@ -609,6 +627,17 @@ section {
     background: linear-gradient(to bottom, transparent, var(--dark-bg));
 }
 
+.about h2 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, rgba(123, 104, 238, 0.1) 0%, rgba(123, 104, 238, 0.3) 50%, rgba(123, 104, 238, 0.1) 100%);
+    border-radius: 8px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -623,6 +652,7 @@ section {
     margin-bottom: 20px;
 }
 
+/* About image styling */
 .about-image {
     position: relative;
 }
@@ -650,17 +680,17 @@ section {
     z-index: -1;
 }
 
-.about h2 {
+.about-image h3 {
     text-align: center;
-    padding: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    font-size: 2.8rem;
-    background: linear-gradient(90deg, rgba(123, 104, 238, 0.1) 0%, rgba(123, 104, 238, 0.3) 50%, rgba(123, 104, 238, 0.1) 100%);
-    border-radius: 8px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 25px;
 }
 
+.about-image .tags {
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Skills layout */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -673,16 +703,7 @@ section {
     color: var(--text-primary);
 }
 
-.about-image h3 {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.about-image .tags {
-    justify-content: center;
-    margin: 0 auto;
-}
-
+/* Contact styling */
 .contact-email {
     text-align: center;
     margin: 15px 0;
@@ -702,4 +723,24 @@ section {
 .contact-email i {
     margin-right: 8px;
     color: var(--accent-color);
+}
+
+/* ------------------------------------------------
+   SCROLLBAR
+------------------------------------------------ */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--button-hover);
 }
